@@ -29,15 +29,3 @@
 3つの方法を同時に試したところ成功したので、どれが良かったか（もしくは全て必要だったか）はわからない
 1. dockerfileの設定
 CMD["python", "manage.py", "runserver", "0.0.0.0:8000"] # 0.0.0.0:8000を追加
-2. settings.pyの"Allow hosts"修正
-  ALLOW HOSTS = ["*"]として、全てのホストを受け入れた。
-3. setttings.pyのINSTALLED_APPSに今回作成した、"testapp"を追加
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'testapp'　## ←これを追加
-]
