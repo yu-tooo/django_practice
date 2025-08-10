@@ -1,0 +1,30 @@
+やったことと躓いたこと
+1. docker compose up -d --build のときに躓いたこと
+  dockero-compose.yamlに以下を記載してdocker containerを作ろうとした
+  image: python:3.13.5
+  volumes:
+      - ./src: /home/app
+  するとコンテナがupしない。(exitしてlogも特に出ない)
+  ↓
+  原因と解決策
+  コンテナをたてた後、特にコマンドを実行しないとそのまま終わるらしい。(多分コマンドが終わった場合も止まるんじゃないかな？)
+  dockekr-compose.yamlに以下を追加
+  command tail -f /dev/null
+  ブラックホールディレクトリをひたすら見続けるコマンドを実行することで動き続ける
+
+2. docker compose execができない。
+   containerに入ろうとした。
+   ↓
+   docker compose psで、以下の用に表示
+   docker compose ps
+    NAME                  IMAGE           COMMAND               SERVICE      CREATED         STATUS         PORTS
+    django-python-app-1   python:3.13.5   "tail -f /dev/null"   python-app   4 minutes ago   Up 4 minutes   
+
+　　docker compose exec django-python-app1 bash でエラー
+　　↓
+　　原因 docker compose exec <サービス名>
+　　なので、python-appにしないといけない。（これは気づけたな...エラーメッセージ的にも）
+
+3. djangoのプロジェクトを開始したい
+   ↓ 
+   django-admin startproject myappで

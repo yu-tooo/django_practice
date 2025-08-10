@@ -1,0 +1,12 @@
+前提条件
+    - pythonが使用可能であること(var: 3.13.5)
+    - pipが使用可能なこと(var: pip 25.1.1 from /usr/local/lib/python3.13/site-packages/pip (python 3.13))
+
+djangoプロジェクトを開始する
+    djangoをインストールする。pip install django (最新の安定板をインストール)
+    ↓ 5.2.4 がインストールされた
+    Django   5.2.4
+    ↓ djangoのプロジェクトを開始する(プロジェクト名: myapp)
+    ```
+    django-admin startproject myapp
+    ```

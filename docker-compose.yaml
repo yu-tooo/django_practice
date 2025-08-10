@@ -1,0 +1,6 @@
+services:
+    python-app:
+        image: python:3.13.5
+        volumes:
+            - ./src:/home
+        command: tail -f /dev/null
