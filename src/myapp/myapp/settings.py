@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-vbo&q-r=7^_m9*_x+#=6u=ewkm7#shr_@x*sbmla6d_mfti@b9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"] #開発環境用 
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'testapp'
 ]
 
 MIDDLEWARE = [

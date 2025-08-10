@@ -1,6 +1,8 @@
 services:
     python-app:
-        image: python:3.13.5
+        build: ./src/docker
+        working_dir: /home/myapp
+        ports:
+            - 8000:8000
         volumes:
             - ./src:/home
-        command: tail -f /dev/null

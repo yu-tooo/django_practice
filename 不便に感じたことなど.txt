@@ -1,0 +1,2 @@
+dockekr compose exec でコンテナ内に入ったとき,appがある/home/appまで移動しないといけない
+→ work dir を設定する

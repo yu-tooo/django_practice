@@ -1,0 +1,8 @@
+1 djangoのインストール
+    pip install djangp
+2 djangoプロジェクトの開始
+    django-admin startproject <project名>
+3 djangoアプリの開始
+    python manage.py startapp <app名>
+
+※↑プロジェクトとアプリの開始はいらないかも（すでにファイルに入っているため）

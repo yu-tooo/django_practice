@@ -8,5 +8,8 @@ djangoプロジェクトを開始する
     Django   5.2.4
     ↓ djangoのプロジェクトを開始する(プロジェクト名: myapp)
     ```
-    django-admin startproject myapp
+        django-admin startproject myapp
     ```
+djangoのアプリを作成する。
+    ```
+        python manage.py startapp <app名>
