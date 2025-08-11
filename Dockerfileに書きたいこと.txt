@@ -4,5 +4,6 @@
     django-admin startproject <project名>
 3 djangoアプリの開始
     python manage.py startapp <app名>
+4 mysqlクライントもインストールしとく
 
 ※↑プロジェクトとアプリの開始はいらないかも（すでにファイルに入っているため）

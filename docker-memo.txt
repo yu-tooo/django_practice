@@ -29,3 +29,14 @@
 3つの方法を同時に試したところ成功したので、どれが良かったか（もしくは全て必要だったか）はわからない
 1. dockerfileの設定
 CMD["python", "manage.py", "runserver", "0.0.0.0:8000"] # 0.0.0.0:8000を追加
+4. 'cryptography' package is required for sha256_password or caching_sha2_password auth methods
+mysqlでマイグレーションをしようとしたときに、出たエラー。
+認証方式で必要なパッケージなのでcopilotが提示してきた解消方法は
+解決方法1: cryptographyパッケージをインストール
+解決方法2: MySQLの認証方式を変更
+解決方法3: settings.pyでMySQL接続オプションを追加
+※ PyMySQLをクライアントツールとしてインストールする場合は、manage.pyに
+```
+   import pymysql
+   pymysql.install_as_MySQLdb()
+```
